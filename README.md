@@ -27,18 +27,18 @@ int main(int argc, char *argv[])
      * @brief Create a window with the IGraphical library class.
     */
     library.createWindow();
-
+    library.createSprite("./assets/suga.png");
+    library.createSprite("./assets/jk.png");
     /**
      * @brief Loop of the game until the library.getEvent() function return the "quit" event.
     */
     while (library.getEvent() != QUIT) {
-        /**
-        * Not thinked yet
-        **/
+        library.drawSprites();
     }
     /**
      * @brief Destroy the window created by the IGraphical library class.
     */
+    library.deleteSprites();
     library.destroyWindow();
 }
 ```
