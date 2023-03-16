@@ -8,7 +8,16 @@ After all, the goal is to have to possibility to share you're libraries with ano
 ```cpp
 int main(int argc, char *argv[])
 {
-    return 0;
+    IGraphical library;
+
+    library.createWindow();
+
+    while (library.getEvent() != QUIT) {
+        /**
+        * Not thinked yet
+        **/
+    }
+    library.destroyWindow();
 }
 ```
 
