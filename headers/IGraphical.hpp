@@ -8,6 +8,8 @@
 #ifndef IGRAPHICAL_HPP_
     #define IGRAPHICAL_HPP_
 
+#include <string>
+#include <array>
 
 /**
 @brief An enumeration for representing different events.
@@ -39,6 +41,27 @@ class IGraphical {
         @return The received event name.
         */
         virtual event_t getEvent() = 0;
+
+        /**
+        ** @brief Create a sprite
+        ** @param path_to_sprite Path to the sprite to be created
+        ** @return 0 if everything was good, else -1
+        */
+        virtual int createSprite(std::string path_to_sprite) = 0;
+        /**
+        ** @brief Delete every sprites loaded
+        ** @return 0 if everything was good, else -1
+        */
+        virtual int deleteSprites() = 0;
+        /**
+        ** @brief Draw every sprites loaded in memory.
+        */
+        virtual void drawSprites() = 0;
+
+        /** @brief Play music.*/
+        virtual void playMusic() = 0;
+        /** @brief Stop music.*/
+        virtual void stopMusic() = 0;
 };
 
 #endif /* !IGRAPHICAL_HPP_ */
