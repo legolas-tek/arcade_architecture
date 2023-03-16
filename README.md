@@ -1,4 +1,3 @@
-
 # Arcade - Epitech
 
 Arcade is an Epitech project, that have for goal to implement diffents, game and graphical libraries.
