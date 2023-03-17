@@ -58,6 +58,16 @@ namespace arcade {
             */
             virtual void drawSprites() const = 0;
 
+            /**
+            ** @brief Clear window :):) hahahhahahah
+            */
+            virtual void clear_window() = 0;
+
+            /**
+            ** @brief Refresh window :):) hahahhahahah
+            */
+            virtual void refresh_window() = 0;
+
             /** @brief Play music.*/
             virtual void playMusic() = 0;
             /** @brief Stop music.*/
