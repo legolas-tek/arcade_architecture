@@ -8,11 +8,12 @@
 #ifndef IGAME_HPP_
     #define IGAME_HPP_
 
+    #include "arcade.hpp"
+
 /**
 ** @brief Arcade namespace.
 */
 namespace arcd {
-
     /**
     ** @brief An interface for defining different arcade games.
     */
@@ -20,6 +21,8 @@ namespace arcd {
         public:
             /** @brief Pure virtual destructor.*/
             virtual ~IGame() = default;
+
+            void doAction(arcd::event_t event);
     };
 
 }

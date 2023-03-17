@@ -8,22 +8,11 @@
 #ifndef IGRAPHICAL_HPP_
     #define IGRAPHICAL_HPP_
 
-#include <string>
-#include <array>
+    #include <string>
+    #include <array>
+    #include "arcade.hpp"
 
 namespace arcd {
-    /**
-    @brief An enumeration for representing different events.
-    */
-    typedef enum event_e {
-        UP, /*The "up" event. */
-        DOWN, /*The "down" event. */
-        LEFT, /*The "left" event. */
-        RIGHT, /*The "right" event. */
-        PAUSE, /*The "pause" event. */
-        QUIT /*The "quit" event. */
-    } event_t;
-
     /**
     @brief An interface for defining graphical libraries.
     */
