@@ -29,7 +29,7 @@ namespace arcd {
             ** @brief Return the event received if there is one.
             ** @return The received event name.
             */
-            virtual event_t getEvent() const = 0;
+            virtual arcd::event_t getEvent() const = 0;
 
             /**
             ** @brief Create a sprite
@@ -61,6 +61,19 @@ namespace arcd {
             virtual void playMusic() = 0;
             /** @brief Stop music.*/
             virtual void stopMusic() = 0;
+
+            class Error : public std::exception {
+                public:
+                    Error(const std::string &error)
+                        : _error(error) {};
+                    const char *what() const noexcept
+                    {
+                        return ("Graphical:" + _error).c_str();
+                    };
+
+                private:
+                    std::string _error;
+            };
     };
 };
 

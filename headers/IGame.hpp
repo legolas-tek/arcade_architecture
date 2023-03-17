@@ -9,7 +9,9 @@
     #define IGAME_HPP_
 
     #include "arcade.hpp"
-
+    #include <vector>
+    #include <map>
+    #include <string>
 /**
 ** @brief Arcade namespace.
 */
@@ -22,8 +24,27 @@ namespace arcd {
             /** @brief Pure virtual destructor.*/
             virtual ~IGame() = default;
 
-            void doAction(arcd::event_t event);
-    };
+            /** @brief Handle Event with the received parameter */
+            virtual void handleEvent(arcd::event_t event) = 0;
 
-}
+            /** @brief Load of map of the game */
+            virtual std::vector<std::string> loadMap(std::string path) = 0;
+
+            /** @brief Load Scene */
+            virtual void loadScene(std::string path) = 0;
+
+            class Error : public std::exception {
+                public:
+                    Error(const std::string &error)
+                        : _error(error) {};
+                    const char *what() const noexcept
+                    {
+                        return ("Game:" + _error).c_str();
+                    };
+
+                private:
+                    std::string _error;
+            };
+    };
+};
 #endif /* !IGAME_HPP_ */
