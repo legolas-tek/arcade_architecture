@@ -25,16 +25,5 @@ namespace arcd {
         PAUSE, /*The "pause" event. */
         QUIT /*The "quit" event. */
     } event_t;
-
-    /** @brief Information of Element */
-    typedef struct element_s {
-        int x = 0;
-        int y = 0;
-    } element_t;
-
-    /** @brief Scene to Store Elements */
-    typedef struct scene_s {
-        std::map<std::string, element_t> elements;
-    } scene_t;
 }
 #endif /* !ARCADE_HPP_ */
