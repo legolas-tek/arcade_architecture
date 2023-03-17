@@ -16,6 +16,7 @@ namespace arcd {
     @brief An enumeration for representing different events.
     */
     typedef enum event_e {
+        NOTING = 0, /* Do nothing. */
         UP, /*The "up" event. */
         DOWN, /*The "down" event. */
         LEFT, /*The "left" event. */
