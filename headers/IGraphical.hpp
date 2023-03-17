@@ -11,7 +11,7 @@
 #include <string>
 #include <array>
 
-namespace arcade {
+namespace arcd {
     /**
     @brief An enumeration for representing different events.
     */
@@ -29,7 +29,7 @@ namespace arcade {
     */
     class IGraphical {
         public:
-            /* @brief Virtual destructor.*/
+            /* @brief Pure virtual destructor.*/
             virtual ~IGraphical() = default;
 
             /** @brief Create a window.*/
@@ -37,8 +37,8 @@ namespace arcade {
             /** @brief Destroy a window. */
     	    virtual void destroyWindow() = 0;
             /**
-            @brief Return the event received if there is one.
-            @return The received event name.
+            ** @brief Return the event received if there is one.
+            ** @return The received event name.
             */
             virtual event_t getEvent() const = 0;
 
