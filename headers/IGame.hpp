@@ -27,7 +27,8 @@ namespace arcd {
             /** @brief Pure virtual destructor.*/
             virtual ~IGame() = default;
 
-            /** @brief This function will update every states and elements of the
+            /** 
+            ** @brief This function will update every states and elements of the
             ** game in relation to the event passed in parameters. */
             virtual void update(arcd::event_t event) = 0;
 

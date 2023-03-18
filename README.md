@@ -12,6 +12,7 @@ After all, the goal is to have to possibility to share you're libraries with ano
  * @brief Include the Graphical interface to use it.
 */
 #include "IGraphical.hpp"
+#include "IGame.hpp"
 
 
 // Main function
@@ -21,25 +22,37 @@ int main(int argc, char *argv[])
      * @brief Create a library instance with the path to the .so file gived by the user.
      * The loadLibrary(char *path) function will open the asked library and will return a IGraphical class.
     */
-    IGraphical library = loadLibrary(argv[1]);
+    IGraphical *library = loadLibrary(argv[1]);
+    /**
+     * @brief Create a game instance with the path to the .so file gived by the user.
+     * The loadGame(char *path) function will open the asked library and will return a IGame class.
+    */
+    IGame *game = loadGame(argv[2]);
+    /**
+     * @brief Create an event variable to store the actual event
+    */
+    event_t event = NOTHING;
 
     /**
-     * @brief Create a window with the IGraphical library class.
+     * @brief Loop the game while the actual event isn't a "quit" event
     */
-    library.createWindow();
-    library.createSprite("./assets/suga.png");
-    library.createSprite("./assets/jk.png");
-    /**
-     * @brief Loop of the game until the library.getEvent() function return the "quit" event.
-    */
-    while (library.getEvent() != QUIT) {
-        library.drawSprites();
+    while (event != QUIT) {
+        /**
+         * @brief Update the actual event.
+        */
+        event = library.getEvent();
+        /**
+         * @brief Update the game state in relation with the actuel event.
+        */
+        game.update(event);
+        /**
+         * @brief Get the map after her update and pass it to the graphical library to re-render it.
+        */
+        library.loadMap(game.getMap());
     }
     /**
-     * @brief Destroy the window created by the IGraphical library class.
+     * @brief Everythings will be destroyed by their destructor.
     */
-    library.deleteSprites();
-    library.destroyWindow();
 }
 ```
 
