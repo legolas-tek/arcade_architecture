@@ -12,10 +12,10 @@
 #include <string>
 
 namespace arcd {
-    class MyError: public std::exception {
+    class Error: public std::exception {
         public:
-            MyError(const char *msg) : _err_msg(msg) {};
-            ~MyError() = default;
+            Error(const char *msg) : _err_msg(msg) {};
+            ~Error() = default;
 
             void setErrMsg(const char *msg) { _err_msg = msg; };
 

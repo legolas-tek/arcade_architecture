@@ -8,11 +8,11 @@
 #ifndef ARCADE_HPP_
     #define ARCADE_HPP_
 
-    #include <map>
 /**
 ** @brief Arcade namespace.
 */
 namespace arcd {
+
     /**
     @brief An enumeration for representing different events.
     */
@@ -26,4 +26,5 @@ namespace arcd {
         QUIT /*The "quit" event. */
     } event_t;
 }
+
 #endif /* !ARCADE_HPP_ */

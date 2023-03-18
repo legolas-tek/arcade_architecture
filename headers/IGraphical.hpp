@@ -9,13 +9,14 @@
     #define IGRAPHICAL_HPP_
 
     #include <string>
-    #include <array>
-    #include "arcade.hpp"
+    #include <vector>
+    #include "Arcade.hpp"
 
 namespace arcd {
     /**
     @brief An interface for defining graphical libraries.
     */
+
     class IGraphical {
         public:
             /* @brief Pure virtual destructor.*/
@@ -28,23 +29,15 @@ namespace arcd {
             virtual arcd::event_t getEvent() const = 0;
 
             /**
-            ** @brief Draw every sprites loaded in memory.
+            ** @brief Load the map that is needed to be draw.
+            */
+            virtual void loadMap(std::vector<std::string> &map) = 0;
+
+            /**
+            ** @brief Draw the elements load in memory
             */
             virtual void renderElement() const = 0;
-
-            class Error : public std::exception {
-                public:
-                    Error(const std::string &error)
-                        : _error(error) {};
-                    const char *what() const noexcept
-                    {
-                        return ("Graphical:" + _error).c_str();
-                    };
-
-                private:
-                    std::string _error;
-            };
     };
-};
+}
 
 #endif /* !IGRAPHICAL_HPP_ */
