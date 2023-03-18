@@ -10,8 +10,8 @@
 
     #include "arcade.hpp"
     #include <vector>
-    #include <map>
     #include <string>
+    #include <map>
 /**
 ** @brief Arcade namespace.
 */
@@ -25,13 +25,10 @@ namespace arcd {
             virtual ~IGame() = default;
 
             /** @brief Handle Event with the received parameter */
-            virtual void handleEvent(arcd::event_t event) = 0;
+            virtual void update(arcd::event_t event) = 0;
 
-            /** @brief Load of map of the game */
-            virtual std::vector<std::string> loadMap(std::string path) = 0;
-
-            /** @brief Load Scene */
-            virtual void loadScene(std::string path) = 0;
+            /** @brief Get of map of the game */
+            virtual std::vector<std::string> getMap() = 0;
 
             class Error : public std::exception {
                 public:
@@ -39,7 +36,7 @@ namespace arcd {
                         : _error(error) {};
                     const char *what() const noexcept
                     {
-                        return ("Game:" + _error).c_str();
+                        return _error.c_str();
                     };
 
                 private:
