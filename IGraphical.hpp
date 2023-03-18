@@ -31,12 +31,8 @@ namespace arcd {
             /**
             ** @brief Load the map that is needed to be draw.
             */
-            virtual void loadMap(std::vector<std::string> &map) = 0;
+            virtual void renderElement(std::vector<std::string> &map) = 0;
 
-            /**
-            ** @brief Draw the elements load in memory
-            */
-            virtual void renderElement() const = 0;
     };
 }
 
