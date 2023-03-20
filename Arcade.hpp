@@ -45,7 +45,8 @@ namespace arcade {
         PLAYER = 'p', /* The PLAYER.*/
         WALL = 'w', /* The WALL.*/
         FOOD = 'f', /* The FOOD.*/
-        BERRY = 'b' /* The BERRY.*/
+        BERRY = 'b', /* The BERRY.*/
+        NOTHING = 'o' /* Empty space*/
     } element_t;
 
     /**
