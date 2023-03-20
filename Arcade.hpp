@@ -59,14 +59,14 @@ namespace arcd {
         W_R_C,
     } element_spec_t;
 
-    struct entity_s {
+    typedef struct entity_s {
         element_t type;
         element_spec_t spec;
         std::pair<double, double> pos;
         double speed;
         direction_t direction;
         bool isAlive;
-    };
+    } entity_t;
 }
 
 #endif /* !ARCADE_HPP_ */
