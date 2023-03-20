@@ -34,6 +34,9 @@ namespace arcd {
 
             /** @brief Get the last updated map in order to draw it with a graphical library.*/
             virtual const std::vector<struct entity_s> &getEntity() = 0;
+
+            /** @brief Get the size of the map to print on the screen. */
+            virtual const std::pair<int, int> getMapSize() = 0;
     };
 };
 
