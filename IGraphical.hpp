@@ -31,8 +31,7 @@ namespace arcd {
             /**
             ** @brief Load the map that is needed to be draw.
             */
-            virtual void renderElement(std::vector<std::string> &map) = 0;
-
+            virtual void renderElement(const std::vector<struct entity_s> &entitys) = 0;
     };
 }
 

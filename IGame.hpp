@@ -33,7 +33,7 @@ namespace arcd {
             virtual void update(arcd::event_t event) = 0;
 
             /** @brief Get the last updated map in order to draw it with a graphical library.*/
-            virtual std::vector<std::string> &getMap() = 0;
+            virtual const std::vector<struct entity_s> &getEntity() = 0;
     };
 };
 
