@@ -31,32 +31,40 @@ namespace arcade {
     ** @brief A direction enum that enumerates each directions.
     */
     typedef enum direction_e {
-        DIR_TOP,
-        DIR_LEFT,
-        DIR_RIGHT,
-        DIR_BOTTOM
+        DIR_TOP = 't', /* Top directions.*/
+        DIR_LEFT = 'l', /* Left directions.*/
+        DIR_RIGHT = 'r', /* Right directions.*/
+        DIR_BOTTOM = 'b' /* Bottom directions.*/
     } direction_t;
 
+    /**
+    ** @brief An element enum that put a name on
+    ** every possible rendered element.
+    */
     typedef enum element_e {
-        PLAYER,
-        WALL,
-        FOOD,
-        BERRY
+        PLAYER = 'p', /* The PLAYER.*/
+        WALL = 'w', /* The WALL.*/
+        FOOD = 'f', /* The FOOD.*/
+        BERRY = 'b' /* The BERRY.*/
     } element_t;
 
+    /**
+    ** @brief A complement to the enum element_e that
+    ** allow to specify the type of the elem.
+    */
     typedef enum element_spec_e {
-        TOP_W_L,
-        TOP_W_R,
-        BOT_W_L,
-        BOT_W_R,
-        W_T,
-        W_B,
-        W_L,
-        W_R,
-        W_B_C,
-        W_T_C,
-        W_L_C,
-        W_R_C,
+        TOP_W_L = 'a', /* A wall top left corner. */
+        TOP_W_R = 'b', /* A wall top right corner.*/
+        BOT_W_L = 'c', /* A wall bottom left corner.*/
+        BOT_W_R = 'd', /* A wall bootom right corner.*/
+        W_T = 'e', /* The top wall.*/
+        W_B = 'g', /* The bottom wall.*/
+        W_L = 'h', /* The left wall.*/
+        W_R = 'i', /* The right wall.*/
+        W_B_C = 'j', /* The center bottom wall.*/
+        W_T_C = 'k', /* The center top wall.*/
+        W_L_C = 'l', /* The center left wall.*/
+        W_R_C = 'm', /* The center right wall.*/
     } element_spec_t;
 
     typedef struct entity_s {
