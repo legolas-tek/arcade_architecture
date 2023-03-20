@@ -31,10 +31,10 @@ namespace arcd {
     ** @brief A direction enum that enumerates each directions.
     */
     typedef enum direction_e {
-        TOP,
-        LEFT,
-        RIGHT,
-        BOTTOM
+        DIR_TOP,
+        DIR_LEFT,
+        DIR_RIGHT,
+        DIR_BOTTOM
     } direction_t;
 
     typedef enum element_e {
