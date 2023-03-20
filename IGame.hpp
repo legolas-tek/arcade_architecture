@@ -15,7 +15,7 @@
 /**
 ** @brief Arcade namespace.
 */
-namespace arcd {
+namespace arcade {
 
     /**
     ** @brief An interface for defining different arcade games.
@@ -30,7 +30,7 @@ namespace arcd {
             /** 
             ** @brief This function will update every states and elements of the
             ** game in relation to the event passed in parameters. */
-            virtual void update(arcd::event_t event) = 0;
+            virtual void update(arcade::event_t event) = 0;
 
             /** @brief Get the last updated map in order to draw it with a graphical library.*/
             virtual const std::vector<struct entity_s> &getEntity() = 0;

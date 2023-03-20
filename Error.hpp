@@ -11,7 +11,7 @@
 #include <exception>
 #include <string>
 
-namespace arcd {
+namespace arcade {
     class Error: public std::exception {
         public:
             Error(const char *msg) : _err_msg(msg) {};

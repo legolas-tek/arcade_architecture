@@ -12,7 +12,7 @@
 /**
 ** @brief Arcade namespace.
 */
-namespace arcd {
+namespace arcade {
 
     /**
     @brief An enumeration for representing different events.

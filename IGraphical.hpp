@@ -12,7 +12,7 @@
     #include <vector>
     #include "Arcade.hpp"
 
-namespace arcd {
+namespace arcade {
     /**
     @brief An interface for defining graphical libraries.
     */
@@ -26,7 +26,7 @@ namespace arcd {
             ** @brief Get the event received if there is one.
             ** @return The received event name.
             */
-            virtual arcd::event_t getEvent() = 0;
+            virtual arcade::event_t getEvent() = 0;
 
             /**
             ** @brief Load the map that is needed to be draw.
