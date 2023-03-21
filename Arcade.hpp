@@ -34,7 +34,8 @@ namespace arcade {
         DIR_TOP = 't', /* Top directions.*/
         DIR_LEFT = 'l', /* Left directions.*/
         DIR_RIGHT = 'r', /* Right directions.*/
-        DIR_BOTTOM = 'b' /* Bottom directions.*/
+        DIR_BOTTOM = 'b', /* Bottom directions.*/
+        DIR_NOTHING = 0
     } direction_t;
 
     /**
@@ -66,6 +67,7 @@ namespace arcade {
         W_T_C = 'k', /* The center top wall.*/
         W_L_C = 'l', /* The center left wall.*/
         W_R_C = 'm', /* The center right wall.*/
+        SPEC_NOTHING = 0
     } element_spec_t;
 
     typedef struct entity_s {
