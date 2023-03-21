@@ -80,8 +80,8 @@ namespace arcade {
     } entity_t;
 
     typedef struct game_s {
-        std::vector<struct entity_s> player;
-        std::vector<struct entity_s> mob;
+        std::vector<struct entity_s> entity;
+        std::vector<struct entity_s> map;
         std::size_t score;
         std::size_t time;
     } game_t;
