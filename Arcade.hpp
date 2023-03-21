@@ -78,6 +78,14 @@ namespace arcade {
         direction_t direction;
         bool isAlive;
     } entity_t;
+
+    typedef struct game_s {
+        std::vector<struct entity_s> player;
+        std::vector<struct entity_s> mob;
+        std::size_t score;
+        std::size_t time;
+    } game_t;
+
 }
 
 #endif /* !ARCADE_HPP_ */
