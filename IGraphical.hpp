@@ -31,7 +31,7 @@ namespace arcade {
             /**
             ** @brief Load the map that is needed to be draw.
             */
-            virtual void renderElement(const std::vector<struct entity_s> &entitys) = 0;
+            virtual void renderElement(const struct game_s &game) = 0;
     };
 }
 
