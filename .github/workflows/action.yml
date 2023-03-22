@@ -9,13 +9,13 @@ jobs:
       - name: "make documentation"
         run: |
           "sudo apt-get install doxygen doxygen-doc doxygen-gui graphviz && doxygen doxyfile"
-
-  push_documentation_in_github_pages:
-    name: "push_documentation_in_github_pages"
-    runs-on: "ubuntu-latest"
-    steps:
       - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./html
+
+  # push_documentation_in_github_pages:
+  #   name: "push_documentation_in_github_pages"
+  #   runs-on: "ubuntu-latest"
+  #   steps:
