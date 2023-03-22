@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: "actions/checkout@v3"
         run: |
-          "doxygen doxyfile"
+          "sudo apt-get install doxygen doxygen-doc doxygen-gui graphviz && doxygen doxyfile"
 
   push_documentation_in_github_pages:
     - name: Deploy
