@@ -1,0 +1,16 @@
+name: Action
+
+jobs:
+  make_documentation:
+    name: "make_documentation"
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "actions/checkout@v3"
+        run: |
+          "doxygen doxyfile"
+  push_documentation_in_github_pages:
+    - name: Deploy
+    uses: peaceiris/actions-gh-pages@v3
+    with:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
+      publish_dir: ./html
