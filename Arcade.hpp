@@ -50,10 +50,15 @@ namespace arcade {
         UNKNOWN /* Unknown game.*/
     };
 
+    /**
+     * @brief An enumeration for representing different step of the game.
+     * 
+     */
     enum class Status {
-        PLAYING = 0,
-        WIN,
-        LOSE,
+        PLAYING = 0, /* The game is playing.*/
+        WIN, /* The game is won.*/
+        LOSE, /* The game is lost.*/
+        MENU /* The game is in the menu.*/
     };
 
     /**
