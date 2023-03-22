@@ -39,6 +39,13 @@ namespace arcade {
         DIR_NOTHING = 0
     };
 
+
+    enum class Status {
+        PLAYING = 0,
+        WIN,
+        LOSE,
+    };
+
     /**
     ** @brief An element enum that put a name on
     ** every possible rendered element.
@@ -74,19 +81,20 @@ namespace arcade {
 
     struct Entity {
         char name;
-        GraphicElement type;
-        GraphicElementSpec spec;
+        arcade::GraphicElement type;
+        arcade::GraphicElementSpec spec;
         std::pair<double, double> pos;
         double speed;
-        Direction direction;
+        arcade::Direction direction;
         bool isAlive;
     };
 
     struct Game {
-        std::vector<Entity> entity;
-        std::vector<Entity> map;
+        std::vector<arcade::Entity> entity;
+        std::vector<arcade::Entity> map;
         std::size_t score;
         std::size_t time;
+        arcade::Status status;
     };
 }
 
