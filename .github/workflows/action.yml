@@ -11,7 +11,7 @@ jobs:
           "sudo apt-get install doxygen doxygen-doc doxygen-gui graphviz && doxygen doxyfile"
 
   push_documentation_in_github_pages:
-    name: Deploy
+    - name: Deploy
     uses: peaceiris/actions-gh-pages@v3
     with:
       github_token: ${{ secrets.GITHUB_TOKEN }}
