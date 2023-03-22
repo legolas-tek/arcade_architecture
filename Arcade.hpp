@@ -44,6 +44,7 @@ namespace arcade {
     */
     typedef enum element_e {
         PLAYER = 'p', /* The PLAYER.*/
+        ENEMY = 'e', /* The ENEMY.*/
         WALL = 'w', /* The WALL.*/
         FOOD = 'f', /* The FOOD.*/
         BERRY = 'x', /* The BERRY.*/
@@ -71,6 +72,7 @@ namespace arcade {
     } element_spec_t;
 
     typedef struct entity_s {
+        char name;
         element_t type;
         element_spec_t spec;
         std::pair<double, double> pos;
