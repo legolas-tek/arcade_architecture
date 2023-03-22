@@ -39,6 +39,16 @@ namespace arcade {
         DIR_NOTHING = 0
     };
 
+    /**
+     * @brief An enumeration for representing different games.
+     * 
+     */
+    enum class GameType {
+        PACMAN = 0, /* The PACMAN game.*/
+        NIBBLER, /* The NIBBLER game.*/
+        SNAKE, /* The SNAKE game.*/
+        UNKNOWN /* Unknown game.*/
+    };
 
     enum class Status {
         PLAYING = 0,
