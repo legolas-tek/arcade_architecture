@@ -28,6 +28,10 @@ namespace arcade {
             */
             virtual arcade::Event getEvent() = 0;
 
+            /**
+             * @brief Render Menu
+             */
+            virtual void renderMenu() = 0;
 
             /**
              * @brief Set the Map Size object
