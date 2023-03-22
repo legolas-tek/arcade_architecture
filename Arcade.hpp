@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** arcade_architecture [SSH: 192.168.161.128]
+** arcade_architecture
 ** File description:
 ** arcade
 */
@@ -31,7 +31,7 @@ namespace arcade {
     /**
     ** @brief A direction enum that enumerates each directions.
     */
-    enum class Direction {
+    enum class Direction : char {
         DIR_TOP = 't', /* Top directions.*/
         DIR_LEFT = 'l', /* Left directions.*/
         DIR_RIGHT = 'r', /* Right directions.*/
@@ -50,7 +50,7 @@ namespace arcade {
     ** @brief An element enum that put a name on
     ** every possible rendered element.
     */
-    enum class GraphicElement {
+    enum class GraphicElement : char {
         PLAYER = 'p', /* The PLAYER.*/
         ENEMY = 'e', /* The ENEMY.*/
         WALL = 'w', /* The WALL.*/
@@ -63,7 +63,7 @@ namespace arcade {
     ** @brief A complement to the enum element_e that
     ** allow to specify the type of the elem.
     */
-    enum class GraphicElementSpec {
+    enum class GraphicElementSpec : char {
         TOP_W_L = 'a', /* A wall top left corner. */
         TOP_W_R = 'b', /* A wall top right corner.*/
         BOT_W_L = 'c', /* A wall bottom left corner.*/
@@ -94,7 +94,7 @@ namespace arcade {
         std::vector<arcade::Entity> map;
         std::size_t score;
         std::size_t time;
-        arcade::Status status;
+        arcade::Status status = Status::PLAYING;
     };
 }
 
