@@ -1,5 +1,10 @@
 name: Action
 
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   make_documentation:
     name: "make_documentation"
