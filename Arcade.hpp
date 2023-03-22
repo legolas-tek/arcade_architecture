@@ -8,6 +8,7 @@
 #ifndef ARCADE_HPP_
     #define ARCADE_HPP_
     #include <utility>
+    #include <vector>
 
 /**
 ** @brief Arcade namespace.
@@ -17,7 +18,7 @@ namespace arcade {
     /**
     @brief An enumeration for representing different events.
     */
-    typedef enum event_e {
+    enum class Event {
         NOTHING = 0, /* do nothing */
         UP, /*The "up" event. */
         DOWN, /*The "down" event. */
@@ -25,37 +26,37 @@ namespace arcade {
         RIGHT, /*The "right" event. */
         PAUSE, /*The "pause" event. */
         QUIT /*The "quit" event. */
-    } event_t;
+    };
 
     /**
     ** @brief A direction enum that enumerates each directions.
     */
-    typedef enum direction_e {
+    enum class Direction {
         DIR_TOP = 't', /* Top directions.*/
         DIR_LEFT = 'l', /* Left directions.*/
         DIR_RIGHT = 'r', /* Right directions.*/
         DIR_BOTTOM = 'b', /* Bottom directions.*/
         DIR_NOTHING = 0
-    } direction_t;
+    };
 
     /**
     ** @brief An element enum that put a name on
     ** every possible rendered element.
     */
-    typedef enum element_e {
+    enum class GraphicElement {
         PLAYER = 'p', /* The PLAYER.*/
         ENEMY = 'e', /* The ENEMY.*/
         WALL = 'w', /* The WALL.*/
         FOOD = 'f', /* The FOOD.*/
         BERRY = 'x', /* The BERRY.*/
         EMPTY = 'o' /* Empty space*/
-    } element_t;
+    };
 
     /**
     ** @brief A complement to the enum element_e that
     ** allow to specify the type of the elem.
     */
-    typedef enum element_spec_e {
+    enum class GraphicElementSpec {
         TOP_W_L = 'a', /* A wall top left corner. */
         TOP_W_R = 'b', /* A wall top right corner.*/
         BOT_W_L = 'c', /* A wall bottom left corner.*/
@@ -69,25 +70,24 @@ namespace arcade {
         W_L_C = 'l', /* The center left wall.*/
         W_R_C = 'm', /* The center right wall.*/
         SPEC_NOTHING = 0
-    } element_spec_t;
+    };
 
-    typedef struct entity_s {
+    struct Entity {
         char name;
-        element_t type;
-        element_spec_t spec;
+        GraphicElement type;
+        GraphicElementSpec spec;
         std::pair<double, double> pos;
         double speed;
-        direction_t direction;
+        Direction direction;
         bool isAlive;
-    } entity_t;
+    };
 
-    typedef struct game_s {
-        std::vector<struct entity_s> entity;
-        std::vector<struct entity_s> map;
+    struct Game {
+        std::vector<Entity> entity;
+        std::vector<Entity> map;
         std::size_t score;
         std::size_t time;
-    } game_t;
-
+    };
 }
 
 #endif /* !ARCADE_HPP_ */

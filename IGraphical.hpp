@@ -26,12 +26,12 @@ namespace arcade {
             ** @brief Get the event received if there is one.
             ** @return The received event name.
             */
-            virtual arcade::event_t getEvent() = 0;
+            virtual arcade::Event getEvent() = 0;
 
             /**
             ** @brief Load the map that is needed to be draw.
             */
-            virtual void renderElement(const struct game_s &game) = 0;
+            virtual void renderElement(const arcade::Game &game) = 0;
     };
 }
 

@@ -30,10 +30,10 @@ namespace arcade {
             /** 
             ** @brief This function will update every states and elements of the
             ** game in relation to the event passed in parameters. */
-            virtual void update(arcade::event_t event) = 0;
+            virtual void update(arcade::Event event) = 0;
 
             /** @brief Get the last updated map in order to draw it with a graphical library.*/
-            virtual const struct game_s &getGameEntity() = 0;
+            virtual const arcade::Game &getGameEntity() = 0;
 
             /** @brief Get the size of the map to print on the screen. */
             virtual const std::pair<int, int> getMapSize() = 0;
