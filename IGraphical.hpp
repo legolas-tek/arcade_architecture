@@ -32,7 +32,7 @@ namespace arcade {
             /**
              * @brief Set the Map Size object
              */
-            virtual void setMapSize(std::pair<int, int> size) = 0;
+            virtual void setMapSize(std::pair<int, int> mapSize) = 0;
             /**
             ** @brief Load the map that is needed to be draw.
             */
