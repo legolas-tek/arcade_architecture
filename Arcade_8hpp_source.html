@@ -87,86 +87,43 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        DOWN, <span class="comment">/*The &quot;down&quot; event. */</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        LEFT, <span class="comment">/*The &quot;left&quot; event. */</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        RIGHT, <span class="comment">/*The &quot;right&quot; event. */</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        PAUSE, <span class="comment">/*The &quot;pause&quot; event. */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        QUIT <span class="comment">/*The &quot;quit&quot; event. */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">   34</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">Direction</a> : char {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        DIR_TOP = <span class="charliteral">&#39;t&#39;</span>, <span class="comment">/* Top directions.*/</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        DIR_LEFT = <span class="charliteral">&#39;l&#39;</span>, <span class="comment">/* Left directions.*/</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        DIR_RIGHT = <span class="charliteral">&#39;r&#39;</span>, <span class="comment">/* Right directions.*/</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        DIR_BOTTOM = <span class="charliteral">&#39;b&#39;</span>, <span class="comment">/* Bottom directions.*/</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        DIR_NOTHING = 0</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacearcade.html#a9d20e16e63661eb2a0df5f3334925ae6">   46</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacearcade.html#a9d20e16e63661eb2a0df5f3334925ae6">GameType</a> {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        PACMAN = 0, <span class="comment">/* The PACMAN game.*/</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        NIBBLER, <span class="comment">/* The NIBBLER game.*/</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        SNAKE, <span class="comment">/* The SNAKE game.*/</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        UNKNOWN <span class="comment">/* Unknown game.*/</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="namespacearcade.html#a7c575e4693848c9abb40907f359cf592">   57</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacearcade.html#a7c575e4693848c9abb40907f359cf592">Status</a> {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        PLAYING = 0, <span class="comment">/* The game is playing.*/</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        WIN, <span class="comment">/* The game is won.*/</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        LOSE, <span class="comment">/* The game is lost.*/</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        MENU <span class="comment">/* The game is in the menu.*/</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="namespacearcade.html#a1555d52bb72f21aeaeb3aa4fcb541fc7">   68</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacearcade.html#a1555d52bb72f21aeaeb3aa4fcb541fc7">GraphicElement</a> : char {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        PLAYER = <span class="charliteral">&#39;p&#39;</span>, <span class="comment">/* The PLAYER.*/</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        ENEMY = <span class="charliteral">&#39;e&#39;</span>, <span class="comment">/* The ENEMY.*/</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        WALL = <span class="charliteral">&#39;w&#39;</span>, <span class="comment">/* The WALL.*/</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        FOOD = <span class="charliteral">&#39;f&#39;</span>, <span class="comment">/* The FOOD.*/</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        BERRY = <span class="charliteral">&#39;x&#39;</span>, <span class="comment">/* The BERRY.*/</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        EMPTY = <span class="charliteral">&#39;o&#39;</span> <span class="comment">/* Empty space*/</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    };</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespacearcade.html#ade87875e97d5b6d504b7b72d1d878f19">   81</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacearcade.html#ade87875e97d5b6d504b7b72d1d878f19">GraphicElementSpec</a> : char {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        TOP_W_L = <span class="charliteral">&#39;a&#39;</span>, <span class="comment">/* A wall top left corner. */</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        TOP_W_R = <span class="charliteral">&#39;b&#39;</span>, <span class="comment">/* A wall top right corner.*/</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        BOT_W_L = <span class="charliteral">&#39;c&#39;</span>, <span class="comment">/* A wall bottom left corner.*/</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        BOT_W_R = <span class="charliteral">&#39;d&#39;</span>, <span class="comment">/* A wall bootom right corner.*/</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        W_T = <span class="charliteral">&#39;e&#39;</span>, <span class="comment">/* The top wall.*/</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        W_B = <span class="charliteral">&#39;g&#39;</span>, <span class="comment">/* The bottom wall.*/</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        W_L = <span class="charliteral">&#39;h&#39;</span>, <span class="comment">/* The left wall.*/</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        W_R = <span class="charliteral">&#39;i&#39;</span>, <span class="comment">/* The right wall.*/</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        W_B_C = <span class="charliteral">&#39;j&#39;</span>, <span class="comment">/* The center bottom wall.*/</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        W_T_C = <span class="charliteral">&#39;k&#39;</span>, <span class="comment">/* The center top wall.*/</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        W_L_C = <span class="charliteral">&#39;l&#39;</span>, <span class="comment">/* The center left wall.*/</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        W_R_C = <span class="charliteral">&#39;m&#39;</span>, <span class="comment">/* The center right wall.*/</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        SPEC_NOTHING = 0</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    };</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structarcade_1_1Entity.html">   97</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structarcade_1_1Entity.html">Entity</a> {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">char</span> name;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="namespacearcade.html#a1555d52bb72f21aeaeb3aa4fcb541fc7">arcade::GraphicElement</a> type;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="namespacearcade.html#ade87875e97d5b6d504b7b72d1d878f19">arcade::GraphicElementSpec</a> spec;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        std::pair&lt;double, double&gt; pos;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">double</span> speed;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">arcade::Direction</a> direction;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">bool</span> isAlive;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    };</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="structarcade_1_1Game.html">  107</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structarcade_1_1Game.html">Game</a> {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        std::vector&lt;arcade::Entity&gt; entity;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        std::vector&lt;arcade::Entity&gt; map;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        std::size_t score;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        std::size_t time;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="namespacearcade.html#a7c575e4693848c9abb40907f359cf592">arcade::Status</a> status = Status::PLAYING;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    };</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ARCADE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        NEXT_GRAPHIC,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        NEXT_GAME,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        MENU,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        RESTART,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        MOUSE_CLICK,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        QUIT <span class="comment">/*The &quot;quit&quot; event. */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    };</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">   38</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">Direction</a> : char {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        DIR_TOP = <span class="charliteral">&#39;t&#39;</span>, <span class="comment">/* Top directions.*/</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        DIR_LEFT = <span class="charliteral">&#39;l&#39;</span>, <span class="comment">/* Left directions.*/</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        DIR_RIGHT = <span class="charliteral">&#39;r&#39;</span>, <span class="comment">/* Right directions.*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        DIR_BOTTOM = <span class="charliteral">&#39;b&#39;</span>, <span class="comment">/* Bottom directions.*/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        DIR_NOTHING = 0</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structarcade_1_1Entity.html">   46</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structarcade_1_1Entity.html">Entity</a> {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">char</span> id;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::pair&lt;double, double&gt; pos;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::pair&lt;double, double&gt; direction;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">double</span> speed;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">bool</span> display;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structarcade_1_1Game.html">   54</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structarcade_1_1Game.html">Game</a> {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::vector&lt;arcade::Entity&gt; entity;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        std::vector&lt;arcade::Entity&gt; map;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::size_t score;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ARCADE_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="anamespacearcade_html"><div class="ttname"><a href="namespacearcade.html">arcade</a></div><div class="ttdoc">Arcade namespace.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:16</div></div>
-<div class="ttc" id="anamespacearcade_html_a1555d52bb72f21aeaeb3aa4fcb541fc7"><div class="ttname"><a href="namespacearcade.html#a1555d52bb72f21aeaeb3aa4fcb541fc7">arcade::GraphicElement</a></div><div class="ttdeci">GraphicElement</div><div class="ttdoc">An element enum that put a name on every possible rendered element.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:68</div></div>
-<div class="ttc" id="anamespacearcade_html_a54c523de8385b986235cf3634443f4d9"><div class="ttname"><a href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">arcade::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">A direction enum that enumerates each directions.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:34</div></div>
+<div class="ttc" id="anamespacearcade_html_a54c523de8385b986235cf3634443f4d9"><div class="ttname"><a href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">arcade::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">A direction enum that enumerates each directions.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:38</div></div>
 <div class="ttc" id="anamespacearcade_html_a54d6c9d87e08026217be5c1e2af73a77"><div class="ttname"><a href="namespacearcade.html#a54d6c9d87e08026217be5c1e2af73a77">arcade::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">An enumeration for representing different events.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:21</div></div>
-<div class="ttc" id="anamespacearcade_html_a7c575e4693848c9abb40907f359cf592"><div class="ttname"><a href="namespacearcade.html#a7c575e4693848c9abb40907f359cf592">arcade::Status</a></div><div class="ttdeci">Status</div><div class="ttdoc">An enumeration for representing different step of the game.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:57</div></div>
-<div class="ttc" id="anamespacearcade_html_a9d20e16e63661eb2a0df5f3334925ae6"><div class="ttname"><a href="namespacearcade.html#a9d20e16e63661eb2a0df5f3334925ae6">arcade::GameType</a></div><div class="ttdeci">GameType</div><div class="ttdoc">An enumeration for representing different games.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:46</div></div>
-<div class="ttc" id="anamespacearcade_html_ade87875e97d5b6d504b7b72d1d878f19"><div class="ttname"><a href="namespacearcade.html#ade87875e97d5b6d504b7b72d1d878f19">arcade::GraphicElementSpec</a></div><div class="ttdeci">GraphicElementSpec</div><div class="ttdoc">A complement to the enum element_e that allow to specify the type of the elem.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:81</div></div>
-<div class="ttc" id="astructarcade_1_1Entity_html"><div class="ttname"><a href="structarcade_1_1Entity.html">arcade::Entity</a></div><div class="ttdef"><b>Definition:</b> Arcade.hpp:97</div></div>
-<div class="ttc" id="astructarcade_1_1Game_html"><div class="ttname"><a href="structarcade_1_1Game.html">arcade::Game</a></div><div class="ttdef"><b>Definition:</b> Arcade.hpp:107</div></div>
+<div class="ttc" id="astructarcade_1_1Entity_html"><div class="ttname"><a href="structarcade_1_1Entity.html">arcade::Entity</a></div><div class="ttdef"><b>Definition:</b> Arcade.hpp:46</div></div>
+<div class="ttc" id="astructarcade_1_1Game_html"><div class="ttname"><a href="structarcade_1_1Game.html">arcade::Game</a></div><div class="ttdef"><b>Definition:</b> Arcade.hpp:54</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

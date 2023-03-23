@@ -85,9 +85,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarcade_1_1IGame.html">IGame</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface for defining different arcade games. Each games specific assets or elements will be created in the game constructor in order to keep it generics.  <a href="classarcade_1_1IGame.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarcade_1_1IGraphical.html">IGraphical</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface for defining graphical libraries.  <a href="classarcade_1_1IGraphical.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -98,7 +95,12 @@ Enumerations</h2></td></tr>
 , <b>LEFT</b>
 , <br />
 &#160;&#160;<b>RIGHT</b>
-, <b>PAUSE</b>
+, <b>NEXT_GRAPHIC</b>
+, <b>NEXT_GAME</b>
+, <b>MENU</b>
+, <br />
+&#160;&#160;<b>RESTART</b>
+, <b>MOUSE_CLICK</b>
 , <b>QUIT</b>
 <br />
  }</td></tr>
@@ -115,53 +117,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a54c523de8385b986235cf3634443f4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A direction enum that enumerates each directions. <br /></td></tr>
 <tr class="separator:a54c523de8385b986235cf3634443f4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d20e16e63661eb2a0df5f3334925ae6"><td class="memItemLeft" align="right" valign="top"><a id="a9d20e16e63661eb2a0df5f3334925ae6"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearcade.html#a9d20e16e63661eb2a0df5f3334925ae6">GameType</a> { <b>PACMAN</b> = 0
-, <b>NIBBLER</b>
-, <b>SNAKE</b>
-, <b>UNKNOWN</b>
- }</td></tr>
-<tr class="memdesc:a9d20e16e63661eb2a0df5f3334925ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">An enumeration for representing different games. <br /></td></tr>
-<tr class="separator:a9d20e16e63661eb2a0df5f3334925ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c575e4693848c9abb40907f359cf592"><td class="memItemLeft" align="right" valign="top"><a id="a7c575e4693848c9abb40907f359cf592"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearcade.html#a7c575e4693848c9abb40907f359cf592">Status</a> { <b>PLAYING</b> = 0
-, <b>WIN</b>
-, <b>LOSE</b>
-, <b>MENU</b>
- }</td></tr>
-<tr class="memdesc:a7c575e4693848c9abb40907f359cf592"><td class="mdescLeft">&#160;</td><td class="mdescRight">An enumeration for representing different step of the game. <br /></td></tr>
-<tr class="separator:a7c575e4693848c9abb40907f359cf592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1555d52bb72f21aeaeb3aa4fcb541fc7"><td class="memItemLeft" align="right" valign="top"><a id="a1555d52bb72f21aeaeb3aa4fcb541fc7"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearcade.html#a1555d52bb72f21aeaeb3aa4fcb541fc7">GraphicElement</a> : char { <br />
-&#160;&#160;<b>PLAYER</b> = 'p'
-, <b>ENEMY</b> = 'e'
-, <b>WALL</b> = 'w'
-, <b>FOOD</b> = 'f'
-, <br />
-&#160;&#160;<b>BERRY</b> = 'x'
-, <b>EMPTY</b> = 'o'
-<br />
- }</td></tr>
-<tr class="memdesc:a1555d52bb72f21aeaeb3aa4fcb541fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">An element enum that put a name on every possible rendered element. <br /></td></tr>
-<tr class="separator:a1555d52bb72f21aeaeb3aa4fcb541fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade87875e97d5b6d504b7b72d1d878f19"><td class="memItemLeft" align="right" valign="top"><a id="ade87875e97d5b6d504b7b72d1d878f19"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearcade.html#ade87875e97d5b6d504b7b72d1d878f19">GraphicElementSpec</a> : char { <br />
-&#160;&#160;<b>TOP_W_L</b> = 'a'
-, <b>TOP_W_R</b> = 'b'
-, <b>BOT_W_L</b> = 'c'
-, <b>BOT_W_R</b> = 'd'
-, <br />
-&#160;&#160;<b>W_T</b> = 'e'
-, <b>W_B</b> = 'g'
-, <b>W_L</b> = 'h'
-, <b>W_R</b> = 'i'
-, <br />
-&#160;&#160;<b>W_B_C</b> = 'j'
-, <b>W_T_C</b> = 'k'
-, <b>W_L_C</b> = 'l'
-, <b>W_R_C</b> = 'm'
-, <br />
-&#160;&#160;<b>SPEC_NOTHING</b> = 0
-<br />
- }</td></tr>
-<tr class="memdesc:ade87875e97d5b6d504b7b72d1d878f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">A complement to the enum element_e that allow to specify the type of the elem. <br /></td></tr>
-<tr class="separator:ade87875e97d5b6d504b7b72d1d878f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Arcade namespace. </p>

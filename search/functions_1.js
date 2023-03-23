@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['renderelement_30',['renderElement',['../classarcade_1_1IGraphical.html#acf79c1e2f2b472437851414840c55e23',1,'arcade::IGraphical']]],
-  ['rendermenu_31',['renderMenu',['../classarcade_1_1IGraphical.html#aa5dbb9862ac57c5804bbb3741a74ab14',1,'arcade::IGraphical']]]
+  ['update_19',['update',['../classarcade_1_1IGame.html#a5d6f59133477f292c1476a508c9b3c1c',1,'arcade::IGame::update(arcade::Event event)=0'],['../classarcade_1_1IGame.html#a5d6f59133477f292c1476a508c9b3c1c',1,'arcade::IGame::update(arcade::Event event)=0']]]
 ];
