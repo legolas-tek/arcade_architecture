@@ -2,46 +2,44 @@
 ** EPITECH PROJECT, 2023
 ** architecture
 ** File description:
-** IGraphical
+** IGame
 */
 
-#ifndef IGRAPHICAL_HPP_
-    #define IGRAPHICAL_HPP_
+#ifndef IGAME_HPP_
+    #define IGAME_HPP_
 
-    #include <string>
-    #include <vector>
     #include "Arcade.hpp"
+    #include <vector>
+    #include <string>
 
+/**
+** @brief Arcade namespace.
+*/
 namespace arcade {
+
     /**
-    @brief An interface for defining graphical libraries.
+    ** @brief An interface for defining different arcade games.
+    ** Each games specific assets or elements will be created in the game constructor
+    ** in order to keep it generics.
     */
-
-    class IGraphical {
+    class IGame {
         public:
-            /* @brief Pure virtual destructor.*/
-            virtual ~IGraphical() = default;
+            /** @brief Pure virtual destructor.*/
+            virtual ~IGame() = default;
 
             /**
-            ** @brief Get the event received if there is one.
-            ** @return The received event name.
-            */
-            virtual arcade::Event getEvent() = 0;
+            ** @brief This function will update every states and elements of the
+            ** game in relation to the event passed in parameters. */
+            virtual void update(arcade::Event event) = 0;
 
-            /**
-             * @brief Render Menu
-             */
-            virtual void renderMenu() = 0;
+            /** @brief Get the last updated map in order to draw it with a graphical library.*/
+            virtual const arcade::Game &getGameEntity() = 0;
 
-            /**
-             * @brief Set the Map Size object
-             */
-            virtual void setMapSize(std::pair<int, int> mapSize) = 0;
-            /**
-            ** @brief Load the map that is needed to be draw.
-            */
-            virtual void renderElement(const arcade::Game &game) = 0;
+            /** @brief Get the size of the map to print on the screen. */
+            virtual const std::pair<int, int> getMapSize() const = 0;
+
+            virtual const std::pair<int, int> getNextLib() const = 0;
     };
-}
+};
 
-#endif /* !IGRAPHICAL_HPP_ */
+#endif /* !IGAME_HPP_ */
