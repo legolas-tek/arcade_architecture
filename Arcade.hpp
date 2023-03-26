@@ -9,6 +9,7 @@
     #define ARCADE_HPP_
     #include <utility>
     #include <vector>
+    #include <string>
 
 /**
 ** @brief Arcade namespace.
