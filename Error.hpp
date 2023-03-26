@@ -14,16 +14,21 @@
 namespace arcade {
     class Error: public std::exception {
         public:
-            Error(const char *msg) : _err_msg(msg) {};
-            ~Error() = default;
+            Error(const char *message, const char *component = "Arcade") : _err_msg(message), _component(component) {}
+            ~Error() override = default;
 
-            void setErrMsg(const char *msg) { _err_msg = msg; };
+            const char *what() const noexcept override {
+                return _err_msg.c_str();
+            }
 
-            const char* what() const noexcept override { return _err_msg.c_str(); };
+            const char *getComponent() const noexcept {
+                return _component.c_str();
+            }
 
         protected:
         private:
             std::string _err_msg;
+            std::string _component;
     };
 }
 

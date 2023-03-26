@@ -32,6 +32,8 @@ namespace arcade {
             ** game in relation to the event passed in parameters. */
             virtual void update(arcade::Event event) = 0;
 
+            virtual std::string getLibName() const = 0;
+
             /** @brief Get the last updated map in order to draw it with a graphical library.*/
             virtual const arcade::Game &getGameEntity() = 0;
 

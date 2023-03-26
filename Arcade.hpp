@@ -8,8 +8,8 @@
 #ifndef ARCADE_HPP_
     #define ARCADE_HPP_
     #include <utility>
-    #include <vector>
     #include <string>
+    #include <vector>
 
 /**
 ** @brief Arcade namespace.
