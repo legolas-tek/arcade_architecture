@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['setmapsize_14',['setMapSize',['../classarcade_1_1IGraphical.html#ae81a3381a08ce551923dd0d8581c07d5',1,'arcade::IGraphical']]]
+  ['nosymbolerror_14',['NoSymbolError',['../classError_1_1NoSymbolError.html',1,'Error']]],
+  ['notenoughargumentserror_15',['NotEnoughArgumentsError',['../classError_1_1NotEnoughArgumentsError.html',1,'Error']]]
 ];

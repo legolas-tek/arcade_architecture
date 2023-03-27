@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['renderelement_12',['renderElement',['../classarcade_1_1IGraphical.html#acf79c1e2f2b472437851414840c55e23',1,'arcade::IGraphical']]],
-  ['rendermenu_13',['renderMenu',['../classarcade_1_1IGraphical.html#aa5dbb9862ac57c5804bbb3741a74ab14',1,'arcade::IGraphical']]]
+  ['librarytype_13',['LibraryType',['../namespacearcade.html#a02c5dfcd3e413697f141dd5f55fe7b62',1,'arcade']]]
 ];
