@@ -1,36 +1,70 @@
 /*
 ** EPITECH PROJECT, 2023
-** nanotekspice [SSH: 192.168.161.128]
+** Error.hpp
 ** File description:
 ** Error
 */
 
-#ifndef ERROR_HPP_
-#define ERROR_HPP_
+#ifndef ERROR_HPP
+    #define ERROR_HPP
 
-#include <exception>
-#include <string>
+    #include <exception>
+    #include <iostream>
 
-namespace arcade {
-    class Error: public std::exception {
-        public:
-            Error(const char *message, const char *component = "Arcade") : _err_msg(message), _component(component) {}
-            ~Error() override = default;
+class Error {
+    public:
+        class NoSymbolError : public std::exception {
+            public:
+                std::string message;
+                NoSymbolError(const std::string &symbol)
+                    :message("Non existant symbol '" + symbol + "'") {}
+                const char *what() const noexcept override
+                {
+                    return message.c_str();
+                }
+        };
+        class OpenLibraryError : public std::exception {
+            public:
+                std::string message;
+                OpenLibraryError(const std::string &lib)
+                    :message("Lib '" + lib + "' doesn't exist !") {}
+                const char *what() const noexcept override
+                {
+                    return message.c_str();
+                }
+        };
+        class TooManyArgumentsError : public std::exception {
+            public:
+                std::string message;
+                TooManyArgumentsError(const int number)
+                    :message("Too many arguments (" + std::to_string(number) + ")") {}
+                const char *what() const noexcept override
+                {
+                    return message.c_str();
+                }
+        };
+        class NotEnoughArgumentsError : public std::exception {
+            public:
+                std::string message;
+                NotEnoughArgumentsError()
+                    :message("Not enough arguments") {}
+                const char *what() const noexcept override
+                {
+                    return message.c_str();
+                }
+        };
+        class InitSDLError : public std::exception {
+            public:
+                std::string message;
+                InitSDLError(const std::string &error)
+                    :message(error) {}
+                const char *what() const noexcept override
+                {
+                    return message.c_str();
+                }
+        };
+    protected:
+    private:
+};
 
-            const char *what() const noexcept override {
-                return _err_msg.c_str();
-            }
-
-            const char *getComponent() const noexcept {
-                return _component.c_str();
-            }
-
-        protected:
-        private:
-            std::string _err_msg;
-            std::string _component;
-    };
-}
-
-
-#endif /* !ERROR_HPP_ */
+#endif

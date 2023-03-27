@@ -32,11 +32,6 @@ namespace arcade {
             virtual std::string getLibName() const = 0;
 
             /**
-             * @brief Render Menu
-             */
-            virtual void renderMenu() = 0;
-
-            /**
             ** @brief Set the Map Size object
             */
             virtual void setMapSize(std::pair<int, int> mapSize) = 0;

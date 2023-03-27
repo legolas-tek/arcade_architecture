@@ -17,6 +17,14 @@
 namespace arcade {
 
     /**
+     * @brief An enumeration for representing different Library type
+     */
+    enum class LibraryType {
+        GAME = 0,
+        GRAPHIC = 1,
+    };
+
+    /**
     @brief An enumeration for representing different events.
     */
     enum class Event {
