@@ -27,7 +27,7 @@ namespace arcade {
             ** @brief Get the event received if there is one.
             ** @return The received event name.
             */
-            virtual arcade::Event getEvent() = 0;
+            virtual arcade::Event getEvent(const arcade::Game &game) = 0;
 
             virtual std::string getLibName() const = 0;
 
@@ -39,6 +39,8 @@ namespace arcade {
             ** @brief Load the map that is needed to be draw.
             */
             virtual void renderElement(const arcade::Game &game) = 0;
+
+            virtual void setAssetPass(const std::string) = 0;
     };
 }
 

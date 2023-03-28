@@ -41,17 +41,6 @@ namespace arcade {
         QUIT /*The "quit" event. */
     };
 
-    /**
-    ** @brief A direction enum that enumerates each directions.
-    */
-    enum class Direction : char {
-        DIR_TOP = 't', /* Top directions.*/
-        DIR_LEFT = 'l', /* Left directions.*/
-        DIR_RIGHT = 'r', /* Right directions.*/
-        DIR_BOTTOM = 'b', /* Bottom directions.*/
-        DIR_NOTHING = 0
-    };
-
     struct Entity {
         int id;
         std::pair<double, double> pos;
@@ -65,6 +54,7 @@ namespace arcade {
         std::vector<arcade::Entity> entity;
         std::vector<arcade::Entity> map;
         std::size_t score;
+        std::pair<int, int> mouse_pos;
     };
 }
 
