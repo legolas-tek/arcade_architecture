@@ -42,7 +42,7 @@ namespace arcade {
 
             virtual const std::pair<int, int> getNextLib() const = 0;
 
-            virtual const std::string getAssetPass() const = 0;
+            virtual const std::string getAssetPath() const = 0;
     };
 };
 

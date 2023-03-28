@@ -40,7 +40,7 @@ namespace arcade {
             */
             virtual void renderElement(const arcade::Game &game) = 0;
 
-            virtual void setAssetPass(const std::string) = 0;
+            virtual void setAssetPath(const std::string) = 0;
     };
 }
 
