@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['igame_10',['IGame',['../classarcade_1_1IGame.html',1,'arcade']]],
-  ['igraphical_11',['IGraphical',['../classarcade_1_1IGraphical.html',1,'arcade']]],
-  ['initsdlerror_12',['InitSDLError',['../classError_1_1InitSDLError.html',1,'Error']]]
+  ['librarytype_12',['LibraryType',['../namespacearcade.html#a02c5dfcd3e413697f141dd5f55fe7b62',1,'arcade']]]
 ];

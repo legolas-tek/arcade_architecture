@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['entity_22',['Entity',['../structarcade_1_1Entity.html',1,'arcade']]],
-  ['error_23',['Error',['../classError.html',1,'']]]
+  ['entity_21',['Entity',['../structarcade_1_1Entity.html',1,'arcade']]],
+  ['error_22',['Error',['../classError.html',1,'']]]
 ];

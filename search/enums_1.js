@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['event_41',['Event',['../namespacearcade.html#a54d6c9d87e08026217be5c1e2af73a77',1,'arcade']]]
+  ['librarytype_40',['LibraryType',['../namespacearcade.html#a02c5dfcd3e413697f141dd5f55fe7b62',1,'arcade']]]
 ];

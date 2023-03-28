@@ -101,37 +101,29 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        QUIT <span class="comment">/*The &quot;quit&quot; event. */</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">   47</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">Direction</a> : char {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        DIR_TOP = <span class="charliteral">&#39;t&#39;</span>, <span class="comment">/* Top directions.*/</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        DIR_LEFT = <span class="charliteral">&#39;l&#39;</span>, <span class="comment">/* Left directions.*/</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        DIR_RIGHT = <span class="charliteral">&#39;r&#39;</span>, <span class="comment">/* Right directions.*/</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        DIR_BOTTOM = <span class="charliteral">&#39;b&#39;</span>, <span class="comment">/* Bottom directions.*/</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        DIR_NOTHING = 0</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structarcade_1_1Entity.html">   55</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structarcade_1_1Entity.html">Entity</a> {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">int</span> id;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::pair&lt;double, double&gt; pos;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::pair&lt;double, double&gt; direction;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::string type;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">double</span> speed;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">bool</span> display;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structarcade_1_1Game.html">   64</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structarcade_1_1Game.html">Game</a> {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        std::vector&lt;arcade::Entity&gt; entity;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::vector&lt;arcade::Entity&gt; map;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        std::size_t score;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ARCADE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structarcade_1_1Entity.html">   44</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structarcade_1_1Entity.html">Entity</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::pair&lt;double, double&gt; pos;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::pair&lt;double, double&gt; direction;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::string type;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">double</span> speed;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">bool</span> display;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structarcade_1_1Game.html">   53</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structarcade_1_1Game.html">Game</a> {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::vector&lt;arcade::Entity&gt; entity;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::vector&lt;arcade::Entity&gt; map;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        std::size_t score;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::pair&lt;int, int&gt; mouse_pos;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ARCADE_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="anamespacearcade_html"><div class="ttname"><a href="namespacearcade.html">arcade</a></div><div class="ttdoc">Arcade namespace.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:17</div></div>
 <div class="ttc" id="anamespacearcade_html_a02c5dfcd3e413697f141dd5f55fe7b62"><div class="ttname"><a href="namespacearcade.html#a02c5dfcd3e413697f141dd5f55fe7b62">arcade::LibraryType</a></div><div class="ttdeci">LibraryType</div><div class="ttdoc">An enumeration for representing different Library type.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:22</div></div>
-<div class="ttc" id="anamespacearcade_html_a54c523de8385b986235cf3634443f4d9"><div class="ttname"><a href="namespacearcade.html#a54c523de8385b986235cf3634443f4d9">arcade::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">A direction enum that enumerates each directions.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:47</div></div>
 <div class="ttc" id="anamespacearcade_html_a54d6c9d87e08026217be5c1e2af73a77"><div class="ttname"><a href="namespacearcade.html#a54d6c9d87e08026217be5c1e2af73a77">arcade::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">An enumeration for representing different events.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:30</div></div>
-<div class="ttc" id="astructarcade_1_1Entity_html"><div class="ttname"><a href="structarcade_1_1Entity.html">arcade::Entity</a></div><div class="ttdef"><b>Definition:</b> Arcade.hpp:55</div></div>
-<div class="ttc" id="astructarcade_1_1Game_html"><div class="ttname"><a href="structarcade_1_1Game.html">arcade::Game</a></div><div class="ttdef"><b>Definition:</b> Arcade.hpp:64</div></div>
+<div class="ttc" id="astructarcade_1_1Entity_html"><div class="ttname"><a href="structarcade_1_1Entity.html">arcade::Entity</a></div><div class="ttdef"><b>Definition:</b> Arcade.hpp:44</div></div>
+<div class="ttc" id="astructarcade_1_1Game_html"><div class="ttname"><a href="structarcade_1_1Game.html">arcade::Game</a></div><div class="ttdef"><b>Definition:</b> Arcade.hpp:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
