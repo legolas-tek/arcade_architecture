@@ -30,7 +30,7 @@ namespace arcade {
             /**
             ** @brief This function will update every states and elements of the
             ** game in relation to the event passed in parameters. */
-            virtual void update(arcade::Event event) = 0;
+            virtual void update(arcade::Event event, int delta_time) = 0;
 
             virtual std::string getLibName() const = 0;
 
