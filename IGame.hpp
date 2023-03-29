@@ -35,7 +35,7 @@ namespace arcade {
             virtual std::string getLibName() const = 0;
 
             /** @brief Get the last updated map in order to draw it with a graphical library.*/
-            virtual const arcade::Game &getGameEntity() = 0;
+            virtual arcade::Game &getGameEntity() = 0;
 
             /** @brief Get the size of the map to print on the screen. */
             virtual const std::pair<int, int> getMapSize() const = 0;

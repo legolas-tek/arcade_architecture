@@ -27,7 +27,7 @@ namespace arcade {
             ** @brief Get the event received if there is one.
             ** @return The received event name.
             */
-            virtual arcade::Event getEvent(const arcade::Game &game) = 0;
+            virtual arcade::Event getEvent(arcade::Game &game) = 0;
 
             virtual std::string getLibName() const = 0;
 
