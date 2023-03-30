@@ -63,6 +63,16 @@ class Error {
                     return message.c_str();
                 }
         };
+        class BadConfigFileError : public std::exception {
+            public:
+                std::string message;
+                BadConfigFileError(const std::string &error)
+                    :message(error) {}
+                const char *what() const noexcept override
+                {
+                    return message.c_str();
+                }
+        };
     protected:
     private:
 };

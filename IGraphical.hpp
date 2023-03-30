@@ -29,8 +29,6 @@ namespace arcade {
             */
             virtual arcade::Event getEvent(arcade::Game &game) = 0;
 
-            virtual std::string getLibName() const = 0;
-
             /**
             ** @brief Set the Map Size object
             */
@@ -40,7 +38,11 @@ namespace arcade {
             */
             virtual void renderElement(const arcade::Game &game) = 0;
 
-            virtual void setAssetPath(const std::string) = 0;
+            /**
+             * @brief Set the Asset Path object
+             * @param path
+             */
+            virtual void setAssetPath(const std::string &path) = 0;
     };
 }
 
