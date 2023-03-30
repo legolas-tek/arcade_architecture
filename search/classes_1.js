@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['game_23',['Game',['../structarcade_1_1Game.html',1,'arcade']]]
+  ['entity_24',['Entity',['../structarcade_1_1Entity.html',1,'arcade']]],
+  ['error_25',['Error',['../classError.html',1,'']]]
 ];

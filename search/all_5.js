@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nosymbolerror_13',['NoSymbolError',['../classError_1_1NoSymbolError.html',1,'Error']]],
-  ['notenoughargumentserror_14',['NotEnoughArgumentsError',['../classError_1_1NotEnoughArgumentsError.html',1,'Error']]]
+  ['librarytype_13',['LibraryType',['../namespacearcade.html#a02c5dfcd3e413697f141dd5f55fe7b62',1,'arcade']]]
 ];

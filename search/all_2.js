@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['game_5',['Game',['../structarcade_1_1Game.html',1,'arcade']]],
-  ['getevent_6',['getEvent',['../classarcade_1_1IGraphical.html#a231ffe950a4e48b6b135c74b34fa4984',1,'arcade::IGraphical']]],
-  ['getgameentity_7',['getGameEntity',['../classarcade_1_1IGame.html#a3ce1ee76eb87adb0473004d7c129a21b',1,'arcade::IGame']]],
-  ['getmapsize_8',['getMapSize',['../classarcade_1_1IGame.html#aa362594dbf2d158283c6fd1bb5d735c1',1,'arcade::IGame']]]
+  ['entity_3',['Entity',['../structarcade_1_1Entity.html',1,'arcade']]],
+  ['error_4',['Error',['../classError.html',1,'']]],
+  ['event_5',['Event',['../namespacearcade.html#a54d6c9d87e08026217be5c1e2af73a77',1,'arcade']]]
 ];

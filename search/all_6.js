@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['openlibraryerror_15',['OpenLibraryError',['../classError_1_1OpenLibraryError.html',1,'Error']]]
+  ['nosymbolerror_14',['NoSymbolError',['../classError_1_1NoSymbolError.html',1,'Error']]],
+  ['notenoughargumentserror_15',['NotEnoughArgumentsError',['../classError_1_1NotEnoughArgumentsError.html',1,'Error']]]
 ];
