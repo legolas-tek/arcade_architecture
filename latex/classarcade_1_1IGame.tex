@@ -1,0 +1,40 @@
+\hypertarget{classarcade_1_1IGame}{}\doxysection{arcade\+::IGame Class Reference}
+\label{classarcade_1_1IGame}\index{arcade::IGame@{arcade::IGame}}
+
+
+An interface for defining different arcade games. Each games specific assets or elements will be created in the game constructor in order to keep it generics.  
+
+
+
+
+{\ttfamily \#include $<$IGame.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classarcade_1_1IGame_ab574ce2236870266790e003ff511e9a7}\label{classarcade_1_1IGame_ab574ce2236870266790e003ff511e9a7}} 
+virtual \mbox{\hyperlink{classarcade_1_1IGame_ab574ce2236870266790e003ff511e9a7}{$\sim$\+IGame}} ()=default
+\begin{DoxyCompactList}\small\item\em Pure virtual destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1IGame_ab2670544e7f5c98f75cfe62ba10a3ca9}\label{classarcade_1_1IGame_ab2670544e7f5c98f75cfe62ba10a3ca9}} 
+virtual void \mbox{\hyperlink{classarcade_1_1IGame_ab2670544e7f5c98f75cfe62ba10a3ca9}{update}} (\mbox{\hyperlink{namespacearcade_a54d6c9d87e08026217be5c1e2af73a77}{arcade\+::\+Event}} event, int delta\+\_\+time)=0
+\begin{DoxyCompactList}\small\item\em This function will update every states and elements of the game in relation to the event passed in parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1IGame_a3ce1ee76eb87adb0473004d7c129a21b}\label{classarcade_1_1IGame_a3ce1ee76eb87adb0473004d7c129a21b}} 
+virtual \mbox{\hyperlink{structarcade_1_1Game}{arcade\+::\+Game}} \& \mbox{\hyperlink{classarcade_1_1IGame_a3ce1ee76eb87adb0473004d7c129a21b}{get\+Game\+Entity}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the last updated map in order to draw it with a graphical library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1IGame_aa362594dbf2d158283c6fd1bb5d735c1}\label{classarcade_1_1IGame_aa362594dbf2d158283c6fd1bb5d735c1}} 
+virtual const std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classarcade_1_1IGame_aa362594dbf2d158283c6fd1bb5d735c1}{get\+Map\+Size}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the size of the map to print on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1IGame_adec89a997efb83d8eec6701c8f8d5dfc}\label{classarcade_1_1IGame_adec89a997efb83d8eec6701c8f8d5dfc}} 
+virtual const std\+::pair$<$ int, int $>$ {\bfseries get\+Next\+Lib} () const =0
+\item 
+\mbox{\Hypertarget{classarcade_1_1IGame_a4f3213e26dc8b31d170afa114d538658}\label{classarcade_1_1IGame_a4f3213e26dc8b31d170afa114d538658}} 
+virtual const std\+::string {\bfseries get\+Asset\+Path} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface for defining different arcade games. Each games specific assets or elements will be created in the game constructor in order to keep it generics. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+IGame.\+hpp\end{DoxyCompactItemize}

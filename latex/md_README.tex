@@ -1,0 +1,31 @@
+Arcade is an Epitech project, that have for goal to implement diffents, game and graphical libraries. After all, the goal is to have to possibility to share you\textquotesingle{}re libraries with another team that have the same architecture as you.\hypertarget{md_README_autotoc_md1}{}\doxysection{Usage/\+Examples}\label{md_README_autotoc_md1}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}IGraphical.hpp"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}IGame.hpp"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Main function}}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    IGraphical *library = loadLibrary(argv[1]);}
+\DoxyCodeLine{    IGame *game = loadGame(argv[2]);}
+\DoxyCodeLine{    event\_t \textcolor{keyword}{event} = NOTHING;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{while} (event != QUIT) \{}
+\DoxyCodeLine{        \textcolor{keyword}{event} = library.getEvent();}
+\DoxyCodeLine{        game.update(event);}
+\DoxyCodeLine{        library.loadMap(game.getMap());}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md2}{}\doxysection{Authors}\label{md_README_autotoc_md2}
+
+\begin{DoxyItemize}
+\item \href{https://www.github.com/jeremyelalouf}{\texttt{ @jeremyelalouf}}
+\item \href{https://www.github.com/tzhengtek}{\texttt{ @tzhengtek}}
+\item \href{https://www.github.com/yunse-lee-EPITECH}{\texttt{ @yunse-\/lee-\/\+EPITECH}}
+\item \href{https://www.github.com/LindonAliu}{\texttt{ @\+Lindon\+Aliu}} 
+\end{DoxyItemize}

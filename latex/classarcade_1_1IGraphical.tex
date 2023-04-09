@@ -1,0 +1,63 @@
+\hypertarget{classarcade_1_1IGraphical}{}\doxysection{arcade\+::IGraphical Class Reference}
+\label{classarcade_1_1IGraphical}\index{arcade::IGraphical@{arcade::IGraphical}}
+
+
+An interface for defining graphical libraries.  
+
+
+
+
+{\ttfamily \#include $<$IGraphical.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{namespacearcade_a54d6c9d87e08026217be5c1e2af73a77}{arcade\+::\+Event}} \mbox{\hyperlink{classarcade_1_1IGraphical_a231ffe950a4e48b6b135c74b34fa4984}{get\+Event}} (\mbox{\hyperlink{structarcade_1_1Game}{arcade\+::\+Game}} \&game)=0
+\begin{DoxyCompactList}\small\item\em Get the event received if there is one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1IGraphical_ae81a3381a08ce551923dd0d8581c07d5}\label{classarcade_1_1IGraphical_ae81a3381a08ce551923dd0d8581c07d5}} 
+virtual void \mbox{\hyperlink{classarcade_1_1IGraphical_ae81a3381a08ce551923dd0d8581c07d5}{set\+Map\+Size}} (std\+::pair$<$ int, int $>$ map\+Size)=0
+\begin{DoxyCompactList}\small\item\em Set the Map Size object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1IGraphical_acf79c1e2f2b472437851414840c55e23}\label{classarcade_1_1IGraphical_acf79c1e2f2b472437851414840c55e23}} 
+virtual void \mbox{\hyperlink{classarcade_1_1IGraphical_acf79c1e2f2b472437851414840c55e23}{render\+Element}} (const \mbox{\hyperlink{structarcade_1_1Game}{arcade\+::\+Game}} \&game)=0
+\begin{DoxyCompactList}\small\item\em Load the map that is needed to be draw. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classarcade_1_1IGraphical_ab8e8cf3ae41576f2675435cf7a234e59}{set\+Asset\+Path}} (const std\+::string \&path)=0
+\begin{DoxyCompactList}\small\item\em Set the Asset Path object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface for defining graphical libraries. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1IGraphical_a231ffe950a4e48b6b135c74b34fa4984}\label{classarcade_1_1IGraphical_a231ffe950a4e48b6b135c74b34fa4984}} 
+\index{arcade::IGraphical@{arcade::IGraphical}!getEvent@{getEvent}}
+\index{getEvent@{getEvent}!arcade::IGraphical@{arcade::IGraphical}}
+\doxysubsubsection{\texorpdfstring{getEvent()}{getEvent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacearcade_a54d6c9d87e08026217be5c1e2af73a77}{arcade\+::\+Event}} arcade\+::\+IGraphical\+::get\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structarcade_1_1Game}{arcade\+::\+Game}} \&}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the event received if there is one. 
+
+\begin{DoxyReturn}{Returns}
+The received event name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1IGraphical_ab8e8cf3ae41576f2675435cf7a234e59}\label{classarcade_1_1IGraphical_ab8e8cf3ae41576f2675435cf7a234e59}} 
+\index{arcade::IGraphical@{arcade::IGraphical}!setAssetPath@{setAssetPath}}
+\index{setAssetPath@{setAssetPath}!arcade::IGraphical@{arcade::IGraphical}}
+\doxysubsubsection{\texorpdfstring{setAssetPath()}{setAssetPath()}}
+{\footnotesize\ttfamily virtual void arcade\+::\+IGraphical\+::set\+Asset\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the Asset Path object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+IGraphical.\+hpp\end{DoxyCompactItemize}
