@@ -18,14 +18,14 @@ namespace arcade {
 
     /**
      * @brief An enumeration for representing different Library type
-     */
+    */
     enum class LibraryType {
         GAME = 0,
         GRAPHIC = 1,
     };
 
     /**
-    @brief An enumeration for representing different events.
+     * @brief An enumeration for representing different events.
     */
     enum class Event {
         NOTHING = 0, /* do nothing */
@@ -67,6 +67,16 @@ namespace arcade {
         KEY_Z
     };
 
+    /**
+     * @brief A strcture for representing a entity in the game.
+     * for example: a player, a wall, a monster, a bonus, etc.
+     * @param id The id of the entity.
+     * @param pos The position of the entity.
+     * @param direction The direction of the entity (vector).
+     * @param type The type of the entity.
+     * @param speed The speed of the entity.
+     * @param display A boolean to know if the entity is displayed or not.
+    */
     struct Entity {
         int id;
         std::pair<double, double> pos;
@@ -76,6 +86,15 @@ namespace arcade {
         bool display;
     };
 
+    /**
+     * @brief A structure to store all the informations about the game.
+     * @struct Game
+     * @param entity A vector of all the entities in the game.
+     * @param map A vector of all the entities in the map.
+     * @param name The name of the user.
+     * @param score The score of the user.
+     * @param mouse_pos The position of the mouse.
+    */
     struct Game {
         std::vector<arcade::Entity> entity;
         std::vector<arcade::Entity> map;
