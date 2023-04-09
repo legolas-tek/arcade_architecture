@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['toomanyargumentserror_20',['TooManyArgumentsError',['../classError_1_1TooManyArgumentsError.html',1,'Error']]]
+  ['toomanyargumentserror_19',['TooManyArgumentsError',['../classError_1_1TooManyArgumentsError.html',1,'Error']]]
 ];
