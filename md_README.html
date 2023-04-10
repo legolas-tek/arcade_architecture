@@ -71,40 +71,46 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md1"></a>
 Usage/Examples</h1>
 <div class="fragment"><div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;Arcade.hpp</span></div>
-<div class="line"><span class="preprocessor">#include &quot;</span>IGraphical.hpp<span class="stringliteral">&quot;</span></div>
-<div class="line"><span class="stringliteral">#include &quot;</span>IGame.hpp<span class="stringliteral">&quot;</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">// Main function</span></div>
-<div class="line"><span class="stringliteral">int main(int argc, char *argv[])</span></div>
-<div class="line"><span class="stringliteral">{</span></div>
-<div class="line"><span class="stringliteral">    arcade::IGraphical *library = loadLibrary(argv[1]);</span></div>
-<div class="line"><span class="stringliteral">    arcade::IGame *game = loadGame(argv[2]);</span></div>
-<div class="line"><span class="stringliteral">    arcade::Event event = arcade::Event::NOTHING;</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">    while (event != QUIT) {</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">        auto end = std::chrono::steady_clock::now();</span></div>
-<div class="line"><span class="stringliteral">        auto delta = std::chrono::duration_cast&lt;std::chrono::duration&lt;double&gt;&gt;(end - start).count();</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">        start = end;</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">        gameEntity = game-&gt;getGameEntity();</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">        graphical-&gt;renderElement(gameEntity);</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">        event = graphical-&gt;getEvent(game-&gt;getGameEntity());</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">        index = game-&gt;getNextLib();</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">        handleCoreEvent(event, index);</span></div>
-<div class="line"><span class="stringliteral">        /* If some events concern the core/menu you can for exemple handle them directly in your main loop.*/</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">        game-&gt;update(event, delta);</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">    }</span></div>
-<div class="line"><span class="stringliteral">}</span></div>
+<div class="line"><span class="preprocessor">#include &quot;Arcade.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;IGraphical.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;IGame.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Main function</span></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="classarcade_1_1IGraphical.html">arcade::IGraphical</a> *library = loadLibrary(argv[1]);</div>
+<div class="line">    <a class="code" href="classarcade_1_1IGame.html">arcade::IGame</a> *game = loadGame(argv[2]);</div>
+<div class="line">    <a class="code" href="namespacearcade.html#a54d6c9d87e08026217be5c1e2af73a77">arcade::Event</a> <span class="keyword">event</span> = arcade::Event::NOTHING;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (event != QUIT) {</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">auto</span> end = std::chrono::steady_clock::now();</div>
+<div class="line">        <span class="keyword">auto</span> delta = std::chrono::duration_cast&lt;std::chrono::duration&lt;double&gt;&gt;(end - start).count();</div>
+<div class="line"> </div>
+<div class="line">        start = end;</div>
+<div class="line"> </div>
+<div class="line">        gameEntity = game-&gt;<a class="code" href="classarcade_1_1IGame.html#a3ce1ee76eb87adb0473004d7c129a21b">getGameEntity</a>();</div>
+<div class="line"> </div>
+<div class="line">        graphical-&gt;renderElement(gameEntity);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">event</span> = graphical-&gt;getEvent(game-&gt;<a class="code" href="classarcade_1_1IGame.html#a3ce1ee76eb87adb0473004d7c129a21b">getGameEntity</a>());</div>
+<div class="line"> </div>
+<div class="line">        index = game-&gt;<a class="code" href="classarcade_1_1IGame.html#adec89a997efb83d8eec6701c8f8d5dfc">getNextLib</a>();</div>
+<div class="line"> </div>
+<div class="line">        handleCoreEvent(event, index);</div>
+<div class="line">        <span class="comment">/* If some events concern the core/menu you can for exemple handle them directly in your main loop.*/</span></div>
+<div class="line"> </div>
+<div class="line">        game-&gt;<a class="code" href="classarcade_1_1IGame.html#ad4560480e712ebe78c3def6adc06488b">update</a>(event, delta);</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassarcade_1_1IGame_html"><div class="ttname"><a href="classarcade_1_1IGame.html">arcade::IGame</a></div><div class="ttdoc">An interface for defining different arcade games. Each games specific assets or elements will be crea...</div><div class="ttdef"><b>Definition:</b> IGame.hpp:22</div></div>
+<div class="ttc" id="aclassarcade_1_1IGame_html_a3ce1ee76eb87adb0473004d7c129a21b"><div class="ttname"><a href="classarcade_1_1IGame.html#a3ce1ee76eb87adb0473004d7c129a21b">arcade::IGame::getGameEntity</a></div><div class="ttdeci">virtual arcade::Game &amp; getGameEntity()=0</div><div class="ttdoc">Get all the informations about the game to draw on the screen.</div></div>
+<div class="ttc" id="aclassarcade_1_1IGame_html_ad4560480e712ebe78c3def6adc06488b"><div class="ttname"><a href="classarcade_1_1IGame.html#ad4560480e712ebe78c3def6adc06488b">arcade::IGame::update</a></div><div class="ttdeci">virtual void update(arcade::Event event, double deltaTime)=0</div><div class="ttdoc">This function will update every states and elements of the game in relation to the event passed in pa...</div></div>
+<div class="ttc" id="aclassarcade_1_1IGame_html_adec89a997efb83d8eec6701c8f8d5dfc"><div class="ttname"><a href="classarcade_1_1IGame.html#adec89a997efb83d8eec6701c8f8d5dfc">arcade::IGame::getNextLib</a></div><div class="ttdeci">virtual const std::pair&lt; int, int &gt; getNextLib() const =0</div><div class="ttdoc">Get the next library to load.</div></div>
+<div class="ttc" id="aclassarcade_1_1IGraphical_html"><div class="ttname"><a href="classarcade_1_1IGraphical.html">arcade::IGraphical</a></div><div class="ttdoc">An interface for defining graphical libraries.</div><div class="ttdef"><b>Definition:</b> IGraphical.hpp:23</div></div>
+<div class="ttc" id="anamespacearcade_html_a54d6c9d87e08026217be5c1e2af73a77"><div class="ttname"><a href="namespacearcade.html#a54d6c9d87e08026217be5c1e2af73a77">arcade::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">An enumeration for representing different events.</div><div class="ttdef"><b>Definition:</b> Arcade.hpp:26</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
 Authors</h1>
 <ul>
