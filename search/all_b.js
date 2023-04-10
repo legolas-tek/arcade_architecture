@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['update_23',['update',['../classarcade_1_1IGame.html#ad4560480e712ebe78c3def6adc06488b',1,'arcade::IGame']]]
+  ['_7eigame_23',['~IGame',['../classarcade_1_1IGame.html#ab574ce2236870266790e003ff511e9a7',1,'arcade::IGame']]],
+  ['_7eigraphical_24',['~IGraphical',['../classarcade_1_1IGraphical.html#ab17fe25b342e327da87f429b1224229d',1,'arcade::IGraphical']]]
 ];

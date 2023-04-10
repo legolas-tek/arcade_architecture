@@ -84,7 +84,7 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab17fe25b342e327da87f429b1224229d"><td class="memItemLeft" align="right" valign="top"><a id="ab17fe25b342e327da87f429b1224229d"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarcade_1_1IGraphical.html#ab17fe25b342e327da87f429b1224229d">~IGraphical</a> ()=default</td></tr>
-<tr class="memdesc:ab17fe25b342e327da87f429b1224229d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classarcade_1_1IGraphical.html" title="An interface for defining graphical libraries.">IGraphical</a> object Pure virtual destructor for the <a class="el" href="classarcade_1_1IGraphical.html" title="An interface for defining graphical libraries.">IGraphical</a> interface. <br /></td></tr>
+<tr class="memdesc:ab17fe25b342e327da87f429b1224229d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classarcade_1_1IGraphical.html" title="An interface for defining graphical libraries.">IGraphical</a> object Pure virtual destructor for the interface. <br /></td></tr>
 <tr class="separator:ab17fe25b342e327da87f429b1224229d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231ffe950a4e48b6b135c74b34fa4984"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacearcade.html#a54d6c9d87e08026217be5c1e2af73a77">arcade::Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarcade_1_1IGraphical.html#a231ffe950a4e48b6b135c74b34fa4984">getEvent</a> (<a class="el" href="structarcade_1_1Game.html">arcade::Game</a> &amp;game)=0</td></tr>
 <tr class="memdesc:a231ffe950a4e48b6b135c74b34fa4984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the event received if there is one.  <a href="classarcade_1_1IGraphical.html#a231ffe950a4e48b6b135c74b34fa4984">More...</a><br /></td></tr>
@@ -93,7 +93,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:ae81a3381a08ce551923dd0d8581c07d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the map to draw for the graphical library.  <a href="classarcade_1_1IGraphical.html#ae81a3381a08ce551923dd0d8581c07d5">More...</a><br /></td></tr>
 <tr class="separator:ae81a3381a08ce551923dd0d8581c07d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf79c1e2f2b472437851414840c55e23"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarcade_1_1IGraphical.html#acf79c1e2f2b472437851414840c55e23">renderElement</a> (const <a class="el" href="structarcade_1_1Game.html">arcade::Game</a> &amp;game)=0</td></tr>
-<tr class="memdesc:acf79c1e2f2b472437851414840c55e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw all the elements of the game.  <a href="classarcade_1_1IGraphical.html#acf79c1e2f2b472437851414840c55e23">More...</a><br /></td></tr>
+<tr class="memdesc:acf79c1e2f2b472437851414840c55e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw all the elements contained in the game object.  <a href="classarcade_1_1IGraphical.html#acf79c1e2f2b472437851414840c55e23">More...</a><br /></td></tr>
 <tr class="separator:acf79c1e2f2b472437851414840c55e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8e8cf3ae41576f2675435cf7a234e59"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarcade_1_1IGraphical.html#ab8e8cf3ae41576f2675435cf7a234e59">setAssetPath</a> (const std::string &amp;path)=0</td></tr>
 <tr class="memdesc:ab8e8cf3ae41576f2675435cf7a234e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the asset path for the graphical library.  <a href="classarcade_1_1IGraphical.html#ab8e8cf3ae41576f2675435cf7a234e59">More...</a><br /></td></tr>
@@ -101,6 +101,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An interface for defining graphical libraries. </p>
+<p>This interface is used to define the graphical libraries that will be used in the arcade. The graphical libraries must implement all the functions of this interface. In order to be loaded by the arcade. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a231ffe950a4e48b6b135c74b34fa4984"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a231ffe950a4e48b6b135c74b34fa4984">&#9670;&nbsp;</a></span>getEvent()</h2>
@@ -129,7 +130,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Get the event received if there is one. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">game</td><td>The game object. </td></tr>
+    <tr><td class="paramname">game</td><td>The game object to fill it in case of an event. </td></tr>
   </table>
   </dd>
 </dl>
@@ -161,7 +162,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table>
 </div><div class="memdoc">
 
-<p>Draw all the elements of the game. </p>
+<p>Draw all the elements contained in the game object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">game</td><td>The game object that contains all the information needed to draw anything. </td></tr>
@@ -198,7 +199,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Set the asset path for the graphical library. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pathv</td><td>The path to the assets. </td></tr>
+    <tr><td class="paramname">path</td><td>The path to the assets to use. </td></tr>
   </table>
   </dd>
 </dl>

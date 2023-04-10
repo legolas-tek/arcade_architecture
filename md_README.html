@@ -71,23 +71,40 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md1"></a>
 Usage/Examples</h1>
 <div class="fragment"><div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;IGraphical.hpp&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;IGame.hpp&quot;</span></div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Main function</span></div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
-<div class="line">{</div>
-<div class="line">    IGraphical *library = loadLibrary(argv[1]);</div>
-<div class="line">    IGame *game = loadGame(argv[2]);</div>
-<div class="line">    event_t <span class="keyword">event</span> = NOTHING;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (event != QUIT) {</div>
-<div class="line">        <span class="keyword">event</span> = library.getEvent();</div>
-<div class="line">        game.update(event);</div>
-<div class="line">        library.loadMap(game.getMap());</div>
-<div class="line">    }</div>
-<div class="line">}</div>
+<div class="line"><span class="preprocessor">#include &quot;Arcade.hpp</span></div>
+<div class="line"><span class="preprocessor">#include &quot;</span>IGraphical.hpp<span class="stringliteral">&quot;</span></div>
+<div class="line"><span class="stringliteral">#include &quot;</span>IGame.hpp<span class="stringliteral">&quot;</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">// Main function</span></div>
+<div class="line"><span class="stringliteral">int main(int argc, char *argv[])</span></div>
+<div class="line"><span class="stringliteral">{</span></div>
+<div class="line"><span class="stringliteral">    arcade::IGraphical *library = loadLibrary(argv[1]);</span></div>
+<div class="line"><span class="stringliteral">    arcade::IGame *game = loadGame(argv[2]);</span></div>
+<div class="line"><span class="stringliteral">    arcade::Event event = arcade::Event::NOTHING;</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">    while (event != QUIT) {</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">        auto end = std::chrono::steady_clock::now();</span></div>
+<div class="line"><span class="stringliteral">        auto delta = std::chrono::duration_cast&lt;std::chrono::duration&lt;double&gt;&gt;(end - start).count();</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">        start = end;</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">        gameEntity = game-&gt;getGameEntity();</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">        graphical-&gt;renderElement(gameEntity);</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">        event = graphical-&gt;getEvent(game-&gt;getGameEntity());</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">        index = game-&gt;getNextLib();</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">        handleCoreEvent(event, index);</span></div>
+<div class="line"><span class="stringliteral">        /* If some events concern the core/menu you can for exemple handle them directly in your main loop.*/</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">        game-&gt;update(event, delta);</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">    }</span></div>
+<div class="line"><span class="stringliteral">}</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
 Authors</h1>
 <ul>

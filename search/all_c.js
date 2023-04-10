@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7eigame_24',['~IGame',['../classarcade_1_1IGame.html#ab574ce2236870266790e003ff511e9a7',1,'arcade::IGame']]],
-  ['_7eigraphical_25',['~IGraphical',['../classarcade_1_1IGraphical.html#ab17fe25b342e327da87f429b1224229d',1,'arcade::IGraphical']]]
+  ['_7eigame_21',['~IGame',['../classarcade_1_1IGame.html#ab574ce2236870266790e003ff511e9a7',1,'arcade::IGame']]]
 ];
