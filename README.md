@@ -11,7 +11,7 @@ After all, the goal is to have to possibility to share you're libraries with ano
 /**
  * @brief Include the Graphical interface to use it.
 */
-#include "Arcade.hpp
+#include "Arcade.hpp"
 #include "IGraphical.hpp"
 #include "IGame.hpp"
 
