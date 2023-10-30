@@ -134,6 +134,5 @@ int main(int argc, char *argv[])
 ## Authors
 
 -   [@jeremyelalouf](https://www.github.com/jeremyelalouf)
--   [@tzhengtek](https://www.github.com/tzhengtek)
 -   [@yunse-lee-EPITECH](https://www.github.com/yunse-lee-EPITECH)
 -   [@LindonAliu](https://www.github.com/LindonAliu)
